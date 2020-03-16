@@ -1,0 +1,14 @@
+# Title: FFT and Data Window Analysis - Task
+# Review: 2020-01-13T1357 AU
+
+01. Load data file and choose first 2^m records (65k+)
+02. Select data window of size 2^k: 256, 512, 1024, etc.
+03. Iterate data window:
+	04. detrend data
+	05. Run Fast Fourier Transform on data window
+	06. Filter strong Fourier coefficients using threshold value
+	07. Run Inverse FFT
+	08. detrend data
+	09. Calculate autocorrelation for inversed FFT
+10. Calculate distance between data window dw1 and all other data windows
+11. Detect clusters of distances

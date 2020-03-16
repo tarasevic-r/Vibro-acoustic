@@ -1,0 +1,10 @@
+## Sources:
+https://stat.ethz.ch/R-manual/R-devel/library/stats/html/fft.html
+
+https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/
+
+https://riptutorial.com/r/example/14464/fourier-series
+
+
+## C++
+https://www.drdobbs.com/cpp/a-simple-and-efficient-fft-implementatio/199500857

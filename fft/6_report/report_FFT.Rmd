@@ -1,0 +1,115 @@
+---
+title: "FFT EMD WT Data Window Analysis in R"
+subtitle: "Report"
+1 author: "Aleksandras Urbonas"
+date: "2020-01-20"
+review: "2020-01-21T1025"
+output: html_document
+---
+
+
+```{r,include=F,echo=T,warning=T}
+knitr::opts_chunk$set(echo = TRUE)
+rm(list=ls())
+```
+
+---
+
+# Task
+
+1. Load data file and choose first 2^m records (65k+)
+2. Iterate data window of size 2^k: 256, 512, 1024, etc.:
+  + Collect statistical properties
+  + Detrend data
+  + Run Fast Fourier Transform on data window
+  + Filter strong Fourier coefficients using threshold value
+  + Perform inverse FFT
+  + Trend data
+  + Calculate autocorrelation for inversed FFT
+3. Calculate distance between data window dw1 and all other data windows
+4. Detect clusters of distances
+
+---
+
+## # Literature review
+
+A literature review has been done to review the available solutions and development of scientific research in signal trasnformations.
+
+
+
+A comparison of the Hilbert-Huang transform (HHT), the wavelet transform (WT) and the Fourier transform (FT) for analysis of the road surface profiles of three pavement profiles.
+The WT and FT have been the traditional spectral analysis methods, but they are predicated on a priori selection of basis functions that are either of infinite length or have fixed finite widths.
+The central idea of HHT is the EMD, which decomposes a signal into basis functions called the intrinsic mode functions (IMFs).
+The Hilbert transform (HT) can then be applied to the IMFs to generate an energy–time–frequency spectrum called the Hilbert spectrum.
+The strength of HHT is the ability to process non-stationary and non-linear data. Unlike the FT, which transforms information from the time domain into the frequency domain, the HHT does not lose temporal information after transformation, i.e. energy-frequency information is maintained in the time domain. This paper attempts to reveal the frequency and energy content of the road profile data with the three methods mentioned as a means to establishing the most suitable way of characterising the pavement profiles in terms of ride quality.
+
+
+
+
+---
+
+
+## Definition
+
+Fast Fourier Transform (FFT) is a data processing algorithm.
+
+---
+
+
+## Assumptions
+
+1. FFT assumes signal is periodic and it's 'basic ingredient' is various simple sine waves.
+2. In FFT, our signal is changed from the time spectrum to the frequency spectrum.
+
+
+---
+
+## 1. Code:
+
+```{r r1_1,echo=F}
+x <- rnorm(100)
+plot(x, type='h', main='h-plot')
+```
+
+
+Let us add an interactive chart with library `plotly`:
+
+```{r r1_2,echo=F}
+x <- rnorm(100)
+y <- rnorm(100)
+plotly::plot_ly(
+  x = x
+  , y = y
+  , type = 'scatter'
+  , mode = 'markers' #  lines
+)
+
+```
+
+
+---
+
+## 2. Text
+
+Some text. R is a collaborative project with many contributors. Type 'contributors()' for more information and 'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or 'help.start()' for an HTML browser interface to help.
+
+Type 'q()' to quit R.
+
+
+---
+
+## 3. Figures
+
+```{r r1,echo=F}
+n = 300
+set.seed(123)
+par(mar = c(4, 4, 0.1, 0.1))
+plot(rnorm(n), rnorm(n), pch = 21, cex = 5 * runif(n), col = "white", bg = "gray")
+```
+
+
+---
+
+The end.
