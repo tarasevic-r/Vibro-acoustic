@@ -1,0 +1,23 @@
+# Task: Clustering Sensor Data
+
++ 1. Choose one parameter from "blown air"
+
++ 2. Load data into system
+
+- 3. Summarize data
+
+- 4. Plot data
+
+- 5. Prepare data
+	+ scale (normalize)
+	+ calculate differences
+
+. 6. Models:
+	. k-means
+	- dbscan
+
+. 7. Evaluate
+	+ wss
+	+ calinski-harabasz index
+	- silhouette
+	

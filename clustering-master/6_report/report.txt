@@ -1,0 +1,6 @@
+# Data
+
+Report: choose "Расход горячего дутья на фурму 1  Обработанное значение"
+Code: T7_800_R6292
+File: pick newest
+Data source: <z:\projects\Blast Furns\BF#10\DB\2019.01.16-2019.04.19\T7_800_R6292.H5>

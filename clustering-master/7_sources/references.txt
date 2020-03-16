@@ -1,0 +1,11 @@
+# Title: Clustering Sensor Data ####
+# Review: 2019-12-19T0909 AU
+# Chapter: References
+
+1. k-means model validation: <https://www.quora.com/How-can-we-choose-a-good-K-for-K-means-clustering>
+
+2. library `fpc`
+<https://www.rdocumentation.org/packages/fpc/versions/2.1-9/topics/calinhara>
+
+3. clustering overview:
+<https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/>
