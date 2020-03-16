@@ -1,0 +1,24 @@
+Continuous vs discrete WT
+
+-Continuous in CWT indicates all possible in teger factors of shifting and stretching (e.g. by 2, 3, 4, 5, 6, etc.)
+-Discrete WT stretch and shift by powers of 2.
+
+Continuous CWT uses only the one wavelet filter
+	- we have one correlation value for every shift of everty strached wavelet.
+	- to show correlation values (quality of the "match") for all these stretches and shifts, we use a 3-D display.
+	
+UDWT (undecimated discrete wavelet transform)
+	- 4 filters (two low & two high) splited into 2 parts: 
+		-decomposition (forward transform)
+		-reconstruction (inverse transform) 
+			also some additional decomposition and reconstruction can be inserted, producing higher level UDWTs
+	- stretching is done only by factors of 2
+
+	DWT (conventional discrete wavelet transform)
+		- DWT is similar to the UDWT, but produces downsampling and thus potental aliasing problems.
+		- becouse of the aliasing problems we need to be careful by choosing correct wavelet (Haar, Shannon, Daubechies, Coiflet, etc.)
+		
+		
+"Decomposition" in wavelet terminology means spliting the signal into 2 parts using highpass and a lowpass filter. Each of the 2 parts themselves can be decomposed further (split into more parts) using more filters.
+
+"Reconstruction" means using filters to to combine the parts.

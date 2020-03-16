@@ -1,0 +1,33 @@
+CONTINUOUS TO DISCRETE:
+
+	Method 1- very simple method: 
+		determine the number of bins (B),
+		divide the range of the data into B to do equal intervals, 
+		give value 1 for all numbers located in interval 1, 2 for the second interval and so on.
+	###
+	x <- c(1, 100, 120, 2, 50, 13, 26, 100, 99, 71, 4, 75)
+	t <- c(1, 15, 25, 27, 50, 51, 56, 76, 80, 81, 90, 92)
+	bins <- cut(x, breaks = '6', include.lowest = TRUE)
+	bins
+	###
+	
+	Method 2- if you know the number of categories: 
+		do k-mean clustering on the continuous data to cluster the data into k clusters.
+	
+	Method 3- if you do not know the number of categories: 
+		do Hierarchical clustering on the continuous data to cluster the data into k clusters.
+
+
+
+EQUAL INTERVAL WIDTH:
+	###
+	table(discretize(x, method = 'interval'))
+	hist(x, breaks = 20, main = 'Equal interval length')
+	abline(v = discretize(x, method = 'interval', breaks = 6, onlycuts = TRUE))
+	###
+	
+NOTE!
+discretization method. Available are: 
+"interval" (equal interval width), "frequency" (equal frequency), "cluster" (k-means clustering) and "fixed" (categories specifies interval boundaries). 
+Note that equal frequency does not achieve perfect equally sized groups if the data contains duplicated values.
+	

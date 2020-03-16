@@ -1,0 +1,43 @@
+DATA PREPARATION FOR NEURAL NETWORK
+
+		- All data needs to be vectorized, and the vectors should be the same length when they enter the neural net.
+		- The minimums vary with the complexity of the problem, but 100,000 instances in total, across all categories, is a good place to start.
+		- If you have labeled data (i.e. categories A, B, C and D), it’s preferable to have an evenly balanced dataset with 25,000 instances of each label; 
+		that is, 25,000 instances of A, 25,000 instances of B and so forth.
+		- Handling missing data
+		- Extract features
+		- Splitting the data into training & testing sets
+	
+	
+
+	Three common data preprocessing steps are: 
+		-formatting; 
+		-cleaning;
+		-sampling.
+	
+	The final step is to transform the process data.
+	Three common data transformations are:
+		-normalization;
+			Four common normalization techniques may be useful:
+				-scaling to a range (When the feature is more-or-less uniformly distributed across a fixed range.)
+				-clipping (When the feature contains some extreme outliers.)
+				-log scaling (When the feature conforms to the power law.)
+				-z-score (When the feature distribution does not contain extreme outliers.)
+	
+		-attribute decompositions;
+			There may be features that represent a complex concept that may be more useful to a machine learning 
+			method when split into the constituent parts. An example is a date that may have day and time components 
+			that in turn could be split out further. Perhaps only the hour of day is relevant to the problem being solved.
+			consider what feature decompositions you can perform.
+			
+		-attribute aggregations.
+			There may be features that can be aggregated into a single feature that would be more meaningful to the problem 
+			you are trying to solve. For example, there may be a data instances for each time a customer logged into a system 
+			that could be aggregated into a count for the number of logins allowing the additional instances to be discarded. 
+			Consider what type of feature aggregations could perform.
+		
+	
+	
+
+	
+	

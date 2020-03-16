@@ -1,0 +1,92 @@
+ Vibration analysis
+ 
+ <https://www.sciencedirect.com/topics/engineering/vibration-analysis>
+ 
+ 
+ Vibration analysis methodology could be subdivided into four principal domains:
+	- Time domain (tiem series):
+		Typically, time-domain analysis is devoted to detecting the integral performance of the tested part: peak, average, root-mean-square, envelope values of vibration amplitude. These values are compared with threshold values in order to detect abnormal performance or latent defects.
+	
+	- Frequency domain (fft):
+		Frequency domain is able to provide more information as the measured signal is decomposed into a sequence of frequency components (spectrum) by a Fourier transform calculation (or fast Fourier transform—FFT). Local analysis of the different frequency components permits the association of a signature with the processed signal, such that the tested part can be identified precisely by its own signature (signature analysis)
+		
+	- Joint domain (time/frequency domain) (wavelet):
+		Due to the time-varying property of the signal, calculating many spectrums on the time observation window can be found to be useful. To do so, a joint time/frequency technique (Gabor−Wigner−Wavelet) can be used very efficiently. In a particular case of time/frequency analysis, the spectrums are related to the rotational speed of the tested devices (order analysis), such that the analysis of the single order which is represented by a frequency component varying with the speed is rendered possible.
+
+	- Modal analysis:
+		Modal analysis permits the study of the dynamic properties of structures under vibration excitation. This technique uses FFT in order to carry out a transfer function which shows one or more resonances, by means of which it is possible to estimate the characteristic mass, damping, stiffness, and other properties of the tested part. Using a laser interferometer, and suitable software tools, it is possible to apply noncontact vibration analysis for the test and measurement of MEMS (micro-electromechanical system) and MOEMS (micro-optical electromechanical system) dynamics and topography.
+ 
+ 
+ 
+ Vibration analysis is a powerful process of performing all of the following:
+		a) Current machine Status.
+		b) Diagnosing defects related with operational machines.
+		c) Monitoring the overall condition of machines.[5]
+		
+ A complete vibration analysis consists of the following three components:
+		a) Exact vibration determination
+		b) Bearing condition determination
+		c) FFT analysis
+		
+This paper is divided into different sections, each dealing with various aspects of the subject. It begins with maintenance of machine followed by types of monitoring;
+vibration analysis uses in different machineries till date and general overview of the advanced techniques of signature analysis.
+
+
+
+
+MONITORING TECHNIQUES
+
+ Definition: 
+  Condition-Based Monitoring may be defined as the process of monitoring a parameter of condition of a	machine, any impending technical failure or fault may become apparent. Predictive maintenance renders maintenance activities frequent and scheduled, such that any failure may be avoided at an early stage
+
+
+
+ Condition-based maintenance is the best suitable technique to avoid unwanted futuristic failures through condition monitoring or signature analysis for rotating machineries.
+ 
+Condition-Based-Monitoring techniques: (system is very complex and the end user is faced by a great amount of information to analyse)
+	a) Lubrication Analysis
+	b) Shock impact analysis
+	c) Low frequency monitoring
+	d) Higher-order spectral techniques
+	e) Wear debris analysis
+	f) Ultra Sound Analysis
+	g) Temperature Analysis
+	
+	
+Vibration signature analysis is the best suitable technique available for fault identification.
+	
+ADVANCED TECHNIQUES FOR VIBRATION SIGNATURE ANALYSIS
+	*Fuzzy logic neural network (FNN)
+	*Wavelet
+		Wavelet transform (WT) is a mathematical approach that decomposes a time-domain signal into different frequency groups. Wavelet algorithms process data at different scales and resolutions
+	*Expert system
+	*Model-based systems
+	
+	
+	
+!!!!!  Neural networks-based classifications are used in diagnosis of rolling element bearings.
+!!!!!  Fuzzy logic and neural networks have been used in modeling and decision making in diagnostics schemes.
+
+
+	Vibration analog signal can be converted in discrete data for further investigation and various time-domain and frequency-domain features can be used for further investigations. The Hilbert and wavelets transform have tremendous scope in machine fault signature analysis.
+
+
+
+The use of a FUZZY LOGIC approach for integration of vibration-based diagnostic features of rolling element bearings
+<https://www.jvejournals.com/article/16138>
+
+authors presented the generalization of the spectral correlation density called modulation intensity distribution (MID), used for detection of modulations in vibration signal.
+
+???
+On the other hand, REB maintenance can be performed not only based on the vibration signal – in [15] it was shown that employing neural network and the temperature measurement can also provide recognition of damage at the early stage.
+???
+
+authors propose the method based on Mamdani-type fuzzy interference engine [28] including fuzzification and defuzzification input-output modules.
+
+envelope spectrum process requires few preliminary steps, namely acquisition and validation of vibration signal, and finally feature extraction
+
+
+
+
+
+

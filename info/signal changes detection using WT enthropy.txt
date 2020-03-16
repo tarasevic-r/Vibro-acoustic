@@ -1,0 +1,11 @@
+2020.02.19 T11:13
+RT
+
+Notice signals behaviour changes using wavelets coefficients entrophy
+
+We were trying to find out when signal behaviour is changing. Simulated 256 data points, 74hz signal with "glitch" (14hz) in a middle of signal
+wavelet transform was performed on data window = 16 with slide dw/4 signal and calculated signal mean and  entrophy of gained coefficients on each data window. 
+Proposal was that entrophy should be similar in a whole data samples (if signal behaviour is similar) and should be different if it founds a glitch.
+Results showed significant changes in entrophy where glitch was simulated, while mean changes werent significant.
+
+It could be good method for signal changes noticing, but more testing would be needed to verify sensitivity.

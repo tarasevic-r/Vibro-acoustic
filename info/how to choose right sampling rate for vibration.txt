@@ -1,0 +1,17 @@
+There are 3 important parameters that have to be controlled in order to obtain useful measurements for analysis; they are:
+	-Sampling rate
+	-Sampling time
+	-Number of samples
+	
+The sampling rate is the frequency at which measurements are captured from the sensor or transducer.
+
+The sampling time is the length of time used for taking measurements.
+
+The number of samples refers to the quantity of individual measurements recorded.
+
+The sampling rate, sampling time and number of samples are related as follows: Sampling rate x Sampling time = Number of samples
+
+When selecting the sampling rate, the rule of thumb is that it should be 2.56 times greater than the highest frequency that you want to measure; this is known as the Nyquist Frequency.
+
+For example: if you wanted to record a signal with a frequency of 100 Hz, you would have to select a sampling rate of: 100 Hz x 2.56 = 256 Hz
+

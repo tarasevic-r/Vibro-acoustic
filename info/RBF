@@ -1,0 +1,26 @@
+Radial Basis Function (RBF)
+
+	RBF network is an artificial neural network with an:
+		input layer,  
+		hidden layer ( hidden layer of RBF consist hidden neurons and activation function of these neurons is a Gausian function ),
+		output layer.
+ 
+
+	- Signal strength decreases as the input (X) move away from the center.
+	- In RBF architecture, weights connecting input vector to hidden neurons represents the center of the corresponding neuron.
+	- Centers of hidden neurons are determined using K-Means clustering.
+		k Means Clustering algorithm:
+			- Choose the number of cluster centers “K”.
+			- Randomly choose K points from the dataset and set them as K centroids of the data.
+			- For all the points in the dataset, determine the centroid closest to it.
+			- For all centroids, calculate the average of all the points lying closest to the same centroid.
+			- Change the value of all the centroids to corresponding averages calculated in (4).
+			- Go to (3) until convergence.
+			
+		
+		The range of receptive fields is chosen such that entire domain of input vector is covered by the receptive field of the neurons. So, the value of sigma is chosen according to maximum distance “d” between two hidden neurons.
+			
+			σ=d/√2M ;	Where d is the maximum distance between two hidden neurons and M is the number of hidden neurons (number of clusters)
+			
+			
+			

@@ -1,0 +1,10 @@
+ K - nearest neighbors (KNN)
+ 
+	Calculate Euclidean distance between all dataset points (one by one) and new data point
+	sqrt((x(i) - x2)^2 + (y(i) - y(2))^2 + (z(i) - z(2))^2) = C(i)
+	
+	min{C(i)} = k 	<-  k-th cluster
+	
+	- before calculation, data must be normalized  (x-min(x))/(min(x) — max(x))
+	- when we split our data to training and test data sets, data needs to be normalzied before split
+	- KNN is supervised learning algorithm that works on classification problems

@@ -1,0 +1,92 @@
+
+     Title: Wavelet families introduction
+	Review: 2020-02-13 T14:55 RT 
+   Sources:
+		< https://www.researchgate.net/post/Can_anybody_compare_Haar_Daubechies_coiflet_and_symlet_wavelets >
+		< http://www.conceptualwavelets.com/docs/wavelets_ch1.pdf >
+		< http://feihu.eng.ua.edu/NSF_TUES/w7_1a.pdf >
+		
+
+
+Task:
+	Define different wavelet families and understand where and how do we use different filters (low/high pass)
+	
+ 1. Some wavelets are defined by a mathematical expression and are drawn as continuous or infinite. These are called crude wavelets.
+ 2. There is possibility to create your own wavelet, but already made wavelets are extremely adaptable (you can stretch and shift wave)
+		The only "wrong" choice is to avoid wavelets entirely due to an abundant selection
+		
+ Wavelets families:
+	 1. Shannon or "Sinc" wavelets can find events with specific frequencies. (These are similar to "sin(x)/x").
+	 
+	 2. Haar wavelets (the shortest) are good for edge detection and reconstructing binary pulses. (Haar wavelet would match an abrupt discontinuity)
+			The Haar wavelet is the first and simplest orthonormal wavelet basis. The Haar wavelet is conceptually simple, memory efficient, exactly reversible without the edge 
+effects characteristic of other wavelets and computationally cheap. The Haar transform does not have overlapping windows, and reflects only changes between adjacent pixel 
+pairs. it uses just two scaling and wavelet function coefficients, thus calculates pair wise averages and differences.	
+		!!! Haar-Wavelets are only suitable for elementary work. Usually more complex wavelets are necessary. !!!
+			
+	 3. Coiflets wavelets are good for data with self-similarities (fractals) such as financial trends.
+			Coiflets was originally derived from the Daubechies wavelet. It has an even higher computational overhead and uses windows that overlap more. it uses six scaling and 
+wavelet function coefficients, so increase in pixel averaging and differencing leads to a smoother wavelet and increased capabilities in several image-processing 
+techniques (de-noising images, etc.). The filter follows the same structure as both Haar and Daubechies. It calculates both averages and differences using the same 
+format, only with six adjacent pixels. The Coiflet wavelet also follows the mirror technique. (From Wavelet-based Texture Classification of Tissues in Computed Tomography)
+	 
+	 4. Daubechies wavelet family:
+			Daubechies wavelet is the most popular wavelet family used for texture feature analysis, due to orthogonal and compact support abilities. The Daubechies wavelet uses  
+overlapping windows, so the results reflect all changes between pixel intensities. Since Daubechies averages over more pixels, it is smoother than the Haar wavelet. The 
+Daubechies D4 transform has four wavelet and scaling coefficients. The sum of the scaling function coefficients is also one, thus the calculation is averaging over four 
+adjacent pixels. (example: Db20 would match a chirp signal)			
+ 
+
+# Review: 2020-01-25T2039 AU
+# Source: <https://www.youtube.com/watch?v=ZnmvUCtUAEE>
+
+		Chosing proper mother wavelet
+		The main concept in wavelet analysis of signal is similarity of the signal and the selected mother wavelet so the important methods are:
+			ENERGY:
+				energy tell us about similarity of the signal and mother wavelet which used and mother wavelet with highest energy is select
+			ENTROPY:
+				tell us about data missing of the signal and mother wavelet which used and mother wavelet with lowest entropy is select
+
+		#### WAVELET CHOISE ####
+
+		# high frequency - smaller wave # better time localization
+		# low frequency - longer wavelet (and also time window) -> also lower precision
+		## in other words:
+		# selectivity in Frequency (Heisenberg uncertainty principle)
+		# More selective wavelet = less compact support (less selective in time)
+
+
+		## VANISHING MOMENTS = sign of complex wavelet
+
+		# + = more accurate representation
+		# - higher number of vanishing moments, longer support is needed
+
+		# p vanishing moments: polynomial up to p-th order will not be identified with wavelet
+
+
+		## REGULARITY
+
+		# low
+		# higher: smoother -> more vanishing points
+
+
+
+Results:
+	- In the face off Haar wavelet, Daubechies wavelet families are more complex, and generally has a higher computational overhead. Contrary to our initial expectations, in some 
+works, the Haar wavelet is performs better results than Daubechies wavelets. It depends on what we want to do and what we want achieve...
+	- In many applications, the Haar wavelet function is very attractive because it guarantees low redundancy in the algorithm that is used.
+	- Haar wavelet is used to detect sudden changes. The others are used to smooth the images and for texture analysis.
+	- Daubechies wavelet can be correctly applied for speech characterization and achieved good results.
+	- Selected wave must match your signal closely 
+	- Daubechie wavelets vanishing moments:
+		The filter with k=1 vanishing moment corresponds to the Haar filter.
+		The filter with k=2 vanishing moments corresponds to the famous D4 wavelet, which compresses perfectly linear signals.
+		The filter with k=3 vanishing moments compresses perfectly quadratic signals.
+
+Proposal:
+		because we need to find mother wave that closely matches original signal, it could be difficult and not efficient while our signal contains noise,
+		so, proposal is to perform EMD on original signal and perform wavelet transforms on IMF's and then we can compare signals
+		
+		
+
+		
