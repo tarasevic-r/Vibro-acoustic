@@ -1,0 +1,38 @@
+﻿[http://web.vu.lt/mif/a.reklaite/category/laiko-eilutes/]
+
+2017-02-08 18:30
+
+# Laiko eilučių laboratorinių darbų užduotis
+
+Užduoties tikslas – ištirti turimą laiko eilutę ir sukonstruoti adekvatų modelį jai prognozuoti.
+Siūlomos rodiklių rūšys/sritys:
+
+* Makroekonominiai rodikliai (produkcija, investicijos, …)
+* Kainos (naftos, elektros, nekilnojamojo turto, …)
+* Darbo rodikliai (nedarbo lygis, vidutinis darbo užmokestis, …)
+* Labai sezoniški, pvz.: turizmo, duomenys
+* Transporto duomenys (pvz.: keleivių/krovinių pervežimas, transporto priemonių, eismo įvykių statistika, …)
+* Duomenys apie gamtą/aplinkosaugą (oro tarša, saulės dėmės, geizerių aktyvumas, …)
+* Mikroekonominiai duomenys (vienos įmonės pardavimų apimtys, įmonių pelningumas, …)
+* Kokio nors produkto ar produktų grupės pardavimų duomenys
+* Sociologiniai/gyventojų duomenys (migracija, nusikaltimų skaičiai, …)
+* Finansiniai duomenys (pvz.: palūkanų normos, investavimo fondų statistika, …)
+* Elektros suvartojimas
+* Ryšių duomenys (skambučiai, duomenų srautai/pralaidumas, vartotojų prisijungimai, …)
+* Fiskaliniai duomenys (biudžetų dydžiai, mokesčių statistika, …)
+* Sveikatos apsaugos duomenys (lovadienių skaičius, skiepų statistika, alkoholio vartojimas, …)
+* Žemės ūkio statistika (bendra ž.ū. produkcija, konkrečių kultūrų derlius, pasėlių plotas, …)
+* Statybų statistika (pastatytų butų plotas, statybos darbų apimtys, …)
+
+
+# Užduotis:
+
+Susiraskite laiko eilutę, kuri apimtų bent 10 metų laikotarpį.
+Duomenys turi būti ketvirtiniai arba didesnio dažnio (jei duomenys itin didelio dažnio, apimamas laikotarpis gali būti ir mažesnis).
+
+* Pavaizduokite duomenis grafiškai. Apibūdinkite, kokie duomenys vaizduojami (dažnis, apimamas laikotarpis).
+* Kokie veiksniai galėtų daryti poveikį tiriamam rodikliui? Kokie rodikliai galėtų atspindėti šiuos veiksnius? Suraskite keletą tokių rodiklių.
+* Ištirkite šios eilutės sezoniškumą, stacionarumą. Ar šiai laiko eilutei reikalingos kokios nors transformacijos, palengvinančios modelio sudarymą?
+* Sudarykite tiesinės regresijos modelį, įtraukdami papildomus duomenis (rodikliai iš (2) dalies). Ar modelis turi struktūrinių lūžių?
+* Ištirkite modelio likučius. Ar likučiai sudaro baltąjį triukšmą? Jei ne, pakoreguokite modelį, parinkdami likučiams ARMA(p,q) modelį, ir pervertinkite regresiją iš naujo su ARMA paklaidomis. Pakartotinai atlikite likučių analizę.
+* Patikrinkite savo modelį kryžminės patikros būdu, suskaičiuokite prognozės tikslumą kokiu nors kriterijumi (MAPE, MAE, RMSE). Palyginkite savo modelio tikslumą su modelio, gauto auto.arima() funkcija.

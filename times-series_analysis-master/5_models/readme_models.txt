@@ -1,0 +1,1 @@
+# This folder is meant for time series models, such as ARIMA, VAR, etc.
