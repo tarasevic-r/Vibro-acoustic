@@ -26,7 +26,7 @@ Sys.sleep(0.5)
 x11()
 par(mfrow=c(2,1))
 plot.ts(s_orig, ylab = "value", main = "Original signal")
-plot(data$value, col = data$label, lwd =2, pch=data$label
+plot(data$label, col = data$label, lwd =2, pch=data$label
      , ylab = NULL, main = "Clustered signal")
 
 cat('', length(unique(data$label)), "categories found", '\n',

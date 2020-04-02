@@ -2,12 +2,18 @@
 # library("tuneR")
 
 if(vibration ==T){
-    d1 = rmatio::read.mat("../../data/VIBRO/data 1/healthy/H-A-1.mat")
-    d2 = rmatio::read.mat("../../data/VIBRO/data 1/healthy/H-B-1.mat")
-    # d2 = rmatio::read.mat("../../data/VIBRO/bearing data/normal_2.mat")
-    # d3 = rmatio::read.mat("../../data/VIBRO/bearing data/IR014_2.mat")
-    # d4 = rmatio::read.mat("../../data/VIBRO/bearing data/B007_3.mat")
-    # d5 = rmatio::read.mat("../../data/VIBRO/bearing data/B021_1.mat")
+    ### 1
+    # d1 = rmatio::read.mat("../../data/VIBRO/data 1/healthy/H-A-1.mat")
+    # d2 = rmatio::read.mat("../../data/VIBRO/data 1/healthy/H-B-1.mat")
+
+    ### 2
+    # d1 = rmatio::read.mat("../../data/VIBRO/data 1/faulty/B-A-2.mat")
+    # d2 = rmatio::read.mat("../../data/VIBRO/data 1/faulty/B-B-2.mat")
+    
+    # ### 3
+    d1 = rmatio::read.mat("../../data/VIBRO/data 1/faulty/B-C-1.mat")
+    d2 = rmatio::read.mat("../../data/VIBRO/data 1/healthy/H-A-1.mat")
+
     
     
     

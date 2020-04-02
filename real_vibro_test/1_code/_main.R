@@ -5,7 +5,7 @@ rm(list=ls())
 source("user-functions.R")
 
 #read wav file
-vibration = F # set T for vibration data
+vibration = T # set T for vibration data
 audio = "signal_1" # change "signal_1" to save different graphs
 name = "../../data/audio/graztas.wav" # audio signal name
 graph = FALSE # plot original signal? TRUE/FALSE
