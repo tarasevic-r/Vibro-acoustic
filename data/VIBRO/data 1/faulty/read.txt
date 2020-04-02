@@ -1,0 +1,3 @@
+B - ball fault decreasing
+C - ball fault increasing then decreasing
+A - bal fault increasing

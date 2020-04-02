@@ -1,0 +1,3 @@
+A - increasing speed
+B - decreasing speed
+D - decreasing then increasing speed
